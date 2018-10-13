@@ -117,7 +117,25 @@ padding-bottom: var(--spacer);
 label{
   display: block;
   font-weight: bold;
-  
+}
+input[type="text"] ,
+input[type="email"]{
+  border-color: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 10px;
+  width: 480px;
+  max-width: 100%;
+  margin-bottom: var(--spacer); 
+}
+input[type="submit"] {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  background-color: var(--alternative-bg-color);
+  border-radius: 30px;
+  padding: var(--padder);
+  min-width: 200px;
+
+color: ghostwhite;
 }
 /*------------------------- MODULES */
    
