@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Lilita+One|Raleway');
+
+
 /*------------------------- VARIABLES */
 :root {
 
@@ -55,6 +58,19 @@ video {
     height: auto;
 }
 /*------------------------- HEADING AND TYPE */
+
+h1,
+h2,
+h3,
+h4,
+h5{
+  font-family: var(--font-heading);
+  color: var(--strong-text-color);
+  font-weight: normal;
+  
+
+}
+
 /*------------------------- LAYOUTS */
 .layout-full-width,
 .layout-wide {
