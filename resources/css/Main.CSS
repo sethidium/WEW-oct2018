@@ -41,6 +41,14 @@
     --font-size-sub-title: 24px;
     --font-size-heading-small: 16px;
   }
+  ----- Responsive design-------
+  @media(min-width: 800px) {
+      :root{
+        --font-size-site-title: 54px;
+        --font-size-page-title: 80px;
+        --font-size-section-title: 48px; 
+      }
+  }
 /*------------------------- GLOBAL DEFAULTS */
 *{
   box-sizing: border-box;
@@ -72,6 +80,7 @@ h1{font-size: var(--font-size-page-title);}
 h2{font-size: var(--font-size-section-title);}
 h3{font-size: var(--font-size-sub-title);}
 
+-------Hyperlink settings-----
 a{
   color: var(--error-color);
   transition: var(--transition-time);}
@@ -96,6 +105,7 @@ margin-left: auto;
 margin-right: auto;
 }
 /*------------------------- HEADER */
+
 header {background-color: var(--alternative-bg-color);
 padding-top: var(--padder);
 }
@@ -117,7 +127,75 @@ header .layout-wide {
 
 }
 /*------------------------- NAVIGATION */
+
+.navigation{
+  background-color: var(--alternative-bg-color);
+  position: sticky;
+  top: 0;
+}
+.nav-prompt{
+  width: 100%;
+  background-color: var(--alternative-bg-color);
+  color: white;
+  border: none;
+  border-top: 1px solid black;
+  padding-top:  var(--padder);
+  Padding-bottom; var(--padder);
+}
+.nav-inner{
+  margin bottom: 0;
+}
+.nav-inner ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.nav-inner li {
+  text-align: center;
+}
+.nav-inner a {
+  display: block;
+  color: white;
+  padding: var(--spacer) 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border-color);
+}
+.nav-inner a:hover{
+  color: var( --error-color);
+}
+
+@media screen and (min-width: 800px) {
+
+    .nav-prompt{
+      display: none;
+    }
+    .nav-inner ul {
+      display: flex;
+      justify-content: space-between;
+    }
+    .nav-inner {
+      border-bottom: 2px solid transparent;
+    }
+}
+@media screen and (max-width: 800px) {
+  .nav-inner{
+    overflow: hidden;
+    transition: var(--transition-time);
+
+  }
+
+  .nav-inner[aria-expanded="false"] {
+    max-height: 0;
+  }
+
+  .nav-inner[aria-expanded="true"]{
+    max-height: 100vh
+  }
+}
+
 /*------------------------- FOOTER */
+
 footer {background-color: var(--alternative-bg-color)}
 
 .footer-subscribe {background-color:
