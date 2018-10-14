@@ -9,6 +9,8 @@
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="resources/css/normalize.css">
 
+<link rel="stylesheet" href="resources/css/simpleLightbox.min.css">
+
     <link rel="stylesheet" href='resources/css/Main.CSS'>
 
     <link rel="apple-touch-icon" sizes="180x180" href="resources/icons/apple-touch-icon.png">
@@ -65,18 +67,70 @@
     </Div>
 
     <main>
-            <section class="hero-module">
+        <section class="hero-module">
+            <video autoplay muted loop src="resources/video/new-york.mp4" poster="resources/images/new-york-wide-1500.jpg">
 
-                    <img alt="New York" src="resources/images/new-york-wide-1500.jpg">
-                    <div class="hero-content">
-            
-                        <h1 class="heading-main layout-wide">
-                            Media
-                        </h1>
-            
-                    </div>
-                   </section>
+            </video>
+            <div class="hero-content">
 
+                <h1 class="heading-main layout-wide">
+                    Media
+                </h1>
+
+            </div>
+        </section>
+
+        <Section class="layout-wide">
+            <h2>Audio</h2>
+            <audio controls src="resources/audio/bensound-happyrock.mp3"></audio>
+        </Section>
+        <section class="layout-wide">
+            <h2>Image Gallery</h2>
+            <div class="image-gallery">
+                <ul>
+                    <li>
+                        <a href="resources/galleries/new-york-01.jpg">
+                            <img src="resources/galleries/new-york-01-thumb.jpg" alt="New York">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="resources/galleries/new-york-02.jpg">
+                        <img src="resources/galleries/new-york-02-thumb.jpg" alt="New York">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="resources/galleries/new-york-03.jpg">
+                            <img src="resources/galleries/new-york-03-thumb.jpg" alt="New York">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="resources/galleries/new-york-04.jpg">
+                            <img src="resources/galleries/new-york-04-thumb.jpg" alt="New York">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="resources/galleries/new-york-05.jpg">
+                            <img src="resources/galleries/new-york-05-thumb.jpg" alt="New York">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="resources/galleries/new-york-08.jpg">
+                            <img src="resources/galleries/new-york-08-thumb.jpg" alt="New York">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="resources/galleries/new-york-06.jpg">
+                            <img src="resources/galleries/new-york-06-thumb.jpg" alt="New York">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="resources/galleries/new-york-07.jpg">
+                            <img src="resources/galleries/new-york-07-thumb.jpg" alt="New York">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
     </main>
     <Footer>
         <div class="footer-subscribe">
@@ -125,6 +179,8 @@
     <script src="resources/js/css-var-polyfill.js"></script>
 
     <script src="resources/js/jquery.js"></script>
+
+    <script src="resources/js/simpleLightbox.min.js"></script>
 
     <script src="resources/js/Scripts of DOOM.js"></script>
 </Body>
