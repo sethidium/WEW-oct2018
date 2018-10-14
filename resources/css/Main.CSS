@@ -41,8 +41,9 @@
     --font-size-sub-title: 24px;
     --font-size-heading-small: 16px;
   }
-  ----- Responsive design-------
-  @media(min-width: 800px) {
+  /*----- Responsive design-------*/
+
+  @media screen and (min-width: 800px) {
       :root{
         --font-size-site-title: 54px;
         --font-size-page-title: 80px;
@@ -80,7 +81,7 @@ h1{font-size: var(--font-size-page-title);}
 h2{font-size: var(--font-size-section-title);}
 h3{font-size: var(--font-size-sub-title);}
 
--------Hyperlink settings-----
+/*-------Hyperlink settings-----*/
 a{
   color: var(--error-color);
   transition: var(--transition-time);}
@@ -132,6 +133,8 @@ header .layout-wide {
   background-color: var(--alternative-bg-color);
   position: sticky;
   top: 0;
+
+  z-index: 10;
 }
 .nav-prompt{
   width: 100%;
@@ -140,10 +143,11 @@ header .layout-wide {
   border: none;
   border-top: 1px solid black;
   padding-top:  var(--padder);
-  Padding-bottom; var(--padder);
+  Padding-bottom: var(--padder);
 }
 .nav-inner{
-  margin bottom: 0;
+  margin-bottom: 0;
+  padding-bottom: var(--padder);
 }
 .nav-inner ul {
   padding: 0;
@@ -163,6 +167,11 @@ header .layout-wide {
 }
 .nav-inner a:hover{
   color: var( --error-color);
+}
+.nav-inner .active {
+  border-bottom: 2px solid white;
+  font-weight: bold;
+
 }
 
 @media screen and (min-width: 800px) {
@@ -240,6 +249,38 @@ input[type="submit"] {
 color: ghostwhite;
 }
 /*------------------------- MODULES */
-   
+/* hero module */
 
+@media screen and (min-width:800px) {
+    .hero-module {
+      position: relative;
+    }
+    .hero-module img {
+      width: 100%;
+    }
+    .hero-content {
+      height: 100%;
+      width: 100%;
 
+      position: absolute;
+      bottom: 0;
+
+      text-align: center;
+      display: flex;
+      align-items: center;
+    }
+    .hero-content .heading-main {
+      color: white;
+      text-shadow: 0px 1px 10px var(--strong-text-color);
+    }
+  }
+
+  /* Grids */
+  @media screen and (min-width: 100px) {
+
+    .content-area-grid { 
+      display: grid;
+    grid-template-columns: 48% 48%;
+    justify-content: space-between;
+    }
+  }
