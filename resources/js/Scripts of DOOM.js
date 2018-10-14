@@ -10,6 +10,8 @@ $('.nav-prompt').click(function() {
    else{
     $('.nav-inner').attr('aria-expanded', 'false');
    }
+
+
 //Change the Text//
 if ($('.nav-prompt').text() == 'Open Navigation') {
    
@@ -19,3 +21,13 @@ else {
 }
 })
 
+
+//NAV Active Class
+function activeMenu() {
+    var url = window.location.href;
+    $('.nav-inner a').filter(function() {
+        return this.href == url;
+     }).addClass('active');
+}
+//Run The Function//
+activeMenu()
