@@ -66,6 +66,10 @@ video {
     max-width: 100%;
     height: auto;
 }
+
+iframe {
+  max-width: 100%;
+}
 /*------------------------- HEADING AND TYPE */
 
 h1,
@@ -305,5 +309,25 @@ color: ghostwhite;
   .image-gallery a:hover img {
     filter: unset;
     transform: scale(1.05);
-    
-  }
+}
+
+/* animation*/
+
+@keyframes fadein {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+main{
+  animation-name: fadein;
+  animation-duration: 2s; 
+}
+
+@keyframes spin {
+  100%{transform:rotate(720deg)}
+}
+.logo-wrapper a:hover img {
+  animation-name: spin;
+animation-duration: 0.5s;
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+}
